@@ -3,12 +3,12 @@ FROM ruby:3.0.0
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client npm
 RUN npm i -g yarn && yarn
 
-RUN mkdir /Test_blog
-WORKDIR /Test_blog
-COPY Gemfile /Test_blog/Gemfile
-COPY Gemfile.lock /Test_blog/Gemfile.lock
+RUN mkdir /Rails_project
+WORKDIR /Rails_project
+COPY Gemfile /Rails_project/Gemfile
+COPY Gemfile.lock /Rails_project/Gemfile.lock
 RUN bundle install
-COPY . /Test_blog
+COPY . /Rails_project
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
