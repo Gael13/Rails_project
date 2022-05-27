@@ -12,7 +12,7 @@ Un utilisateur peut ajouter des ingredients dans son frigo et les retirer de son
 Un utilisateur peut demander des suggestions de recettes et dans le cas où les ingredients présents dans le frigo ne permettent pas de faire une recette complète on peut indiquer les ingrédients manquant
 
 
-A la racine du projet, vous trouverez 
+A la racine du projet, vous trouverez un json avec pleins de recette
 
 # Project 2
 * Une application qui permet de calculer les émissions de CO2 d'un trajet donné 
@@ -59,4 +59,5 @@ Init project
 * docker-compose run web rails db:migrate
 
 Launch tests
+* docker-compose run web bundle exec rails db:test:prepare
 * docker-compose run web bundle exec rails test
