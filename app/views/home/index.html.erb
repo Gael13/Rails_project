@@ -1,0 +1,12 @@
+<h1>
+Bonjour
+</h1>
+<% if signed_in? %>
+  <span><%= current_user.email %></span>
+  <span>T'es co mon gars</span>
+  <button><%= link_to 'Sign out', sign_out_path %></button>
+<% else %>
+  <span>T'es pas co mon garssss</span>
+  <button><%= link_to 'register', sign_up_path %></button>
+  <button><%= link_to 'Sign in', sign_in_path %></button>
+<% end %>
