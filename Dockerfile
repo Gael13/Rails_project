@@ -1,6 +1,7 @@
 FROM ruby:3.0.0
 
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client npm
+
+RUN apt-get update -qq && apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates && curl -sL https://deb.nodesource.com/setup_12.x | bash - && apt-get install -y nodejs postgresql-client
 RUN npm i -g yarn && yarn
 
 RUN mkdir /Rails_project
