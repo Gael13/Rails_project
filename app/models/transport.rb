@@ -1,0 +1,3 @@
+class Transport < ApplicationRecord
+  
+end
