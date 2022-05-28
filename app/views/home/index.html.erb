@@ -4,7 +4,8 @@ Bonjour
 <% if signed_in? %>
   <span><%= current_user.email %></span>
   <span>T'es co mon gars</span>
-  <button><%= link_to 'Sign out', sign_out_path %></button>
+  <%= button_to 'Sign out', sign_out_path, method: :delete  %>  
+
 <% else %>
   <span>T'es pas co mon garssss</span>
   <button><%= link_to 'register', sign_up_path %></button>
