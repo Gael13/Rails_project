@@ -61,3 +61,9 @@ Init project
 Launch tests
 * docker-compose run web bundle exec rails db:test:prepare
 * docker-compose run web bundle exec rails test
+
+# Developpement
+
+## Utilisation de la gem Crearance pour gérer l'authetification
+
+Doc : https://github.com/thoughtbot/clearance
