@@ -56,8 +56,10 @@ Un utilisateur peux appeler l'api d'un exchange de cryptos et récupérer les pr
 Init project
 * docker-compose up --build
 * docker-compose run web rails db:create
-* rails generate clearance:install
+* docker-compose run web rails generate clearance:install
+* change the date of the create_users.rb migration file by 20220528161518
 * docker-compose run web rails db:migrate
+* docker-compose run web rails db:seed
 
 Launch tests
 * docker-compose run web bundle exec rails db:test:prepare
