@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get "about", to: "about#index"
   get "calculate", to: "journeys#index", as: "journeys"
   get "transports", to: "transports#index"
+  get "users", to: "users#index"
 end
  

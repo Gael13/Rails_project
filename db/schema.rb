@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_05_28_162528) do
   enable_extension "plpgsql"
 
   create_table "journeys", force: :cascade do |t|
-    t.bigint "users_id", null: false
+    t.bigint "user_id"
     t.integer "distance"
     t.float "result_walk"
     t.float "result_train"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2022_05_28_162528) do
     t.float "result_car"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_journeys_on_users_id"
+    t.index ["user_id"], name: "index_journeys_on_user_id"
   end
 
   create_table "transports", force: :cascade do |t|
@@ -48,5 +48,5 @@ ActiveRecord::Schema.define(version: 2022_05_28_162528) do
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
-  add_foreign_key "journeys", "users", column: "users_id"
+  add_foreign_key "journeys", "users"
 end
