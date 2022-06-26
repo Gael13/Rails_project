@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  users: one
+  distance: 1
+  result_walk: 1.5
+  result_train: 1.5
+  result_electrical_car: 1.5
+  result_bus: 1.5
+  result_plane: 1.5
+  result_car: 1.5
+
+two:
+  users: two
+  distance: 1
+  result_walk: 1.5
+  result_train: 1.5
+  result_electrical_car: 1.5
+  result_bus: 1.5
+  result_plane: 1.5
+  result_car: 1.5
