@@ -22,6 +22,8 @@
         <li class="navbar__element"><%= link_to 'Debug : transports', transports_path, class: "navbar__link" %></li>
       </ul>
     </nav>
-    <%= yield %>
+    <main class="app">
+      <%= yield %>
+    </main>
   </body>
 </html>
