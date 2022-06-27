@@ -1,3 +1,24 @@
-<h1>Means of transport</h1>
+<h1>Your journeys</h1>
 
-<%= @users.inspect %>
+<%# @journeys.inspect %>
+
+<% @journeys.each do |journey| %>
+  <div class="users__container">
+    <h2>For <%= journey['distance'] %> km </h2>
+    <span>Walk : </span>
+    <span><%= journey["result_walk"] %> kgCO2e</span>
+    </br>
+    <span>Train : </span>
+    <span><%= journey["result_train"] %> kgCO2e</span>
+    </br>
+    <span>Electrical_car : </span>
+    <span><%= journey["result_electrical_car"] %> kgCO2e</span>
+    </br>
+    <span>Bus : </span>
+    <span><%= journey["result_bus"] %> kgCO2e</span>
+    </br>
+    <span>Car : </span>
+    <span><%= journey["result_car"] %> kgCO2e</span>
+    </br>
+  </div>
+<% end %>

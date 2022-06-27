@@ -11,12 +11,15 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/users">Mes trajets</a></li>
-        <li><a href="/calculate">Calculer</a></li>
-        <li><a href="/transports">Debug : transports</a></li>
+    <nav class="navbar">
+      <ul class="navbar__container">
+        <li class="navbar__element"><%= link_to 'Home', root_path, class: "navbar__link navbar__link-first" %></li>
+        <%# link to about %>
+        <li class="navbar__element"><%= link_to 'About', about_path, class: "navbar__link" %></li>
+        <%# link to users %>
+        <li class="navbar__element"><%= link_to 'My journeys', users_path, class: "navbar__link" %></li>
+        <li class="navbar__element"><%= link_to 'Calculate', journeys_path, class: "navbar__link" %></li>
+        <li class="navbar__element"><%= link_to 'Debug : transports', transports_path, class: "navbar__link" %></li>
       </ul>
     </nav>
     <%= yield %>

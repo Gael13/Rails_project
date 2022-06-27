@@ -1,10 +1,9 @@
 <h1>Calculte your Co2 emmision</h1>
 
-<%= @journeys.inspect %>
+<%# @journeys.inspect %>
 
-<%# create a form with text input for kilometers %>
 <%= form_with url: "/result", method: :post do |form| %>
-  <%= form.label :km, "Distance du trajet en Km :" %>
+  <%= form.label :km, "Travel distance in km :" %>
   <%= form.number_field :km, in: 1.0..999999.0, step: 0.1 %>
   <%= form.submit "Calculer" %>
 <% end %>

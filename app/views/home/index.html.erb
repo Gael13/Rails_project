@@ -1,13 +1,13 @@
 <h1>
-Bonjour
+Hello
 </h1>
 <% if signed_in? %>
   <span><%= current_user.email %></span>
-  <span>T'es co mon gars</span>
+  <span>You are logged in !</span>
   <%= button_to 'Sign out', sign_out_path, method: :delete  %>  
 
 <% else %>
-  <span>T'es pas co mon garssss</span>
+  <span>Please log in...</span>
   <button><%= link_to 'register', sign_up_path %></button>
   <button><%= link_to 'Sign in', sign_in_path %></button>
 <% end %>

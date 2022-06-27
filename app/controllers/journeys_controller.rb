@@ -1,6 +1,6 @@
 class JourneysController < ApplicationController
   def index
-    @journeys = Journey.all
+    #@journeys = Journey.all
   end
 
   def result
@@ -13,7 +13,7 @@ class JourneysController < ApplicationController
     @transports.each do |transport|
       @results[@i]= {
         'co2' => @km.to_f * transport.multiplier,
-        'slug' => transport.slug
+        'name' => transport.name
       }
       @i += 1
     end
